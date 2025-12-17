@@ -196,7 +196,8 @@ async Task Notify(string msg, bool isFailed = false)
         int index = scKey.IndexOf(' ');
         if (index == -1)
         {
-            await _scClient.GetAsync($"https://sc.ftqq.com/{scKey}.send?text={msg}");
+            await _scClient.GetAsync($"https://sctapi.ftqq.com/{scKey}.send?title=有道云笔记签到&desp={msg}");
+            //await _scClient.GetAsync($"https://sc.ftqq.com/{scKey}.send?text={msg}");
         }
         else
         {
