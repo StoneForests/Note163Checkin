@@ -64,7 +64,7 @@ for (int i = 0; i < _conf.Users.Length; i++)
             Console.WriteLine("login获取cookie,状态:{0}", isInvalid ? "无效" : "有效");
             if (isInvalid)
             {//Cookie失效
-                await Notify($"{title}Cookie失效，请检查登录状态！", true);
+                await Notify($"{title}Cookie失效，请检查登录状态！result:{}", true, result);
                 continue;
             }
         }
